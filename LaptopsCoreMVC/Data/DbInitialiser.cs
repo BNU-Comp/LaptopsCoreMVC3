@@ -12,8 +12,8 @@ namespace LaptopsCoreMVC.Data
         {
             InitialiseCustomers(context);
             InitialiseLaptops(context);
-           // InitialiseAddresses(context);
-           // IntialisePayments(context);
+            InitialiseAddresses(context);
+            IntialisePayments(context);
         }
 
         private static void InitialiseAddresses(ApplicationDbContext context)
@@ -126,7 +126,6 @@ namespace LaptopsCoreMVC.Data
             {
                 new PaymentCard
                 {
-                    PaymentCardID= 1,
                     CardName="Mr Luke Earle",
                     CardNumber="0143 4923 5671 2390",
                     CardType=  CardTypes.AmericanExpress,
@@ -137,7 +136,6 @@ namespace LaptopsCoreMVC.Data
                 new PaymentCard
 
                 {
-                     PaymentCardID= 2,
                     CardName="Mr Christian Partington",
                     CardNumber="2912 7654 8912 4235",
                     CardType=  CardTypes.Visa,
@@ -148,7 +146,6 @@ namespace LaptopsCoreMVC.Data
                  new PaymentCard
 
                 {
-                     PaymentCardID= 3,
                     CardName="Mr Alexis Cortios",
                     CardNumber="6231 5381 9056 8731",
                     CardType=  CardTypes.MasterCard,
@@ -159,7 +156,6 @@ namespace LaptopsCoreMVC.Data
                   new PaymentCard
 
                 {
-                     PaymentCardID= 4,
                     CardName="Mr James Sharp",
                     CardNumber="1478 6723 8912 0376",
                     CardType=  CardTypes.Visa,
@@ -170,7 +166,6 @@ namespace LaptopsCoreMVC.Data
                    new PaymentCard
 
                 {
-                     PaymentCardID= 5,
                     CardName="Mr Thomas Davies",
                     CardNumber="5673 8937 9642 2419",
                     CardType=  CardTypes.AmericanExpress,
@@ -181,7 +176,6 @@ namespace LaptopsCoreMVC.Data
                     new PaymentCard
 
                 {
-                     PaymentCardID= 6,
                     CardName="Mr Neil Alexander",
                     CardNumber="7744 5567 9521 7821",
                     CardType=  CardTypes.Visa,
@@ -193,7 +187,6 @@ namespace LaptopsCoreMVC.Data
                      new PaymentCard
 
                 {
-                     PaymentCardID= 7,
                     CardName="Mr Shaun O'Neil",
                     CardNumber="8467 8214 5910 2345",
                     CardType=  CardTypes.MasterCard,
@@ -204,7 +197,6 @@ namespace LaptopsCoreMVC.Data
                       new PaymentCard
 
                 {
-                     PaymentCardID= 8,
                     CardName="Mr Christian Partington",
                     CardNumber="1010 2020 3232 4747",
                     CardType=  CardTypes.MasterCard,
@@ -215,7 +207,6 @@ namespace LaptopsCoreMVC.Data
                        new PaymentCard
 
                 {
-                     PaymentCardID= 9,
                     CardName="Mr Kevin Wright",
                     CardNumber="7284 4910 5491 1781",
                     CardType=  CardTypes.Visa,
@@ -226,7 +217,6 @@ namespace LaptopsCoreMVC.Data
                         new PaymentCard
 
                 {
-                     PaymentCardID= 10,
                     CardName="Mr Noel Murray",
                     CardNumber="5631 6420 8472 9010 ",
                     CardType=  CardTypes.Visa,
