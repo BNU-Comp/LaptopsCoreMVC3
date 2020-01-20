@@ -1,0 +1,84 @@
+﻿@model LaptopsCoreMVC.Models.Laptop
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Laptop</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="LaptopID" />
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RamSize" class="control-label"></label>
+                <input asp-for="RamSize" class="form-control" />
+                <span asp-validation-for="RamSize" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MemorySize" class="control-label"></label>
+                <input asp-for="MemorySize" class="form-control" />
+                <span asp-validation-for="MemorySize" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LaptopDimensions" class="control-label"></label>
+                <input asp-for="LaptopDimensions" class="form-control" />
+                <span asp-validation-for="LaptopDimensions" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OperatingSystem" class="control-label"></label>
+                <input asp-for="OperatingSystem" class="form-control" />
+                <span asp-validation-for="OperatingSystem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Model" class="control-label"></label>
+                <input asp-for="Model" class="form-control" />
+                <span asp-validation-for="Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Resolution" class="control-label"></label>
+                <input asp-for="Resolution" class="form-control" />
+                <span asp-validation-for="Resolution" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Processor" class="control-label"></label>
+                <input asp-for="Processor" class="form-control" />
+                <span asp-validation-for="Processor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BatteryLife" class="control-label"></label>
+                <input asp-for="BatteryLife" class="form-control" />
+                <span asp-validation-for="BatteryLife" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Colour" class="control-label"></label>
+                <select asp-for="Colour" class="form-control"></select>
+                <span asp-validation-for="Colour" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
