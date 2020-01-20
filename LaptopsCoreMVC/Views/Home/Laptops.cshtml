@@ -1,0 +1,67 @@
+﻿@model IEnumerable<LaptopsCoreMVC.Models.Laptop>
+
+@{
+    ViewData["Title"] = "Laptop List";
+    int count =0;
+}
+
+<h2>Laptops List</h2>
+
+
+
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+    <div class="col-lg-4">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">@item.Model</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => item.RamSize)
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => item.MemorySize)
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => item.LaptopDimensions)
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => item.OperatingSystem)
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => item.Model)
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => item.Resolution)
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => item.Processor)
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => item.BatteryLife)
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => item.Colour)
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => item.Picture)
+                </p>
+                <p>
+                    <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.LaptopID">Details</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+}
+</div>
+            
+

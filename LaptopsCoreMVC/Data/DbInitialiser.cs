@@ -96,7 +96,7 @@ namespace LaptopsCoreMVC.Data
                     Processor = "Core i5",
                     Resolution = "1920 x 1080",
                     Price = 800,
-                    Picture = "Windows.png",
+                    //Picture = "Windows.png",
                     Description = "A smooth all-metal finish gives this laptop a sharp, polished look - from the elevated keyboard to the new narrow bezel design, every detail was crafted for comfort and style."
                 },
 
