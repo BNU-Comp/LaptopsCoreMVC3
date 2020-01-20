@@ -30,16 +30,225 @@ namespace LaptopsCoreMVC.Data
                     HouseNumber = "38",
                     Street = "High Street",
                     City = "Watford",
-                    Country = Counties.Bucks,
+                    Country = Counties.Herts,
                     Postcode = "WD5 0EL"
-                }
+                },
+                new Address
+                {
+                    HouseNumber = "15",
+                    Street = "Alexander Street",
+                    City = "Chesham",
+                    Country = Counties.Bucks,
+                    Postcode = "HP5 2YU"
+                },
+                new Address
+                {
+                    HouseNumber = "8",
+                    Street = "Vicaridge Road",
+                    City = "Watford",
+                    Country = Counties.Herts,
+                    Postcode = "WD5 4HY"
+                },
+                new Address
+                {
+                    HouseNumber = "20",
+                    Street = "Amersham Hill",
+                    City = "Amersham",
+                    Country = Counties.Bucks,
+                    Postcode = "HP5 ITJ"
+                },
+                new Address
+                {
+                    HouseNumber = "13",
+                    Street = "Howard Lane",
+                    City = "Chelmsford",
+                    Country = Counties.Essex,
+                    Postcode = "CB1 6NU"
+                },
+                new Address
+                {
+                    HouseNumber = "2",
+                    Street = "Manor Way",
+                    City = "Brentford",
+                    Country = Counties.Middlesex,
+                    Postcode = "E1 7JH"
+                },
+                new Address
+                {
+                    HouseNumber = "38",
+                    Street = "Queen Alexandra Road",
+                    City = "High Wycombe",
+                    Country = Counties.Bucks,
+                    Postcode = "HP11 2JZ"
+                },
+                new Address
+                {
+                    HouseNumber = "26",
+                    Street = "Diana Street",
+                    City = "Amersham",
+                    Country = Counties.Bucks,
+                    Postcode = "HP5 7JK"
+                },
+                new Address
+                {
+                    HouseNumber = "17",
+                    Street = "James Street",
+                    City = "Hemel Hempstead",
+                    Country = Counties.Herts,
+                    Postcode = "AL4 8HE"
+                },
+                new Address
+                {
+                    HouseNumber = "26",
+                    Street = "Howard Lane",
+                    City = "Beaconsfield",
+                    Country = Counties.Bucks,
+                    Postcode = "HP5 2GT"
+                },
             };
 
+            foreach (Address a in addresses)
+            {
+                context.Addresses.Add(a);
+            }
+
+            context.SaveChanges();
         }
 
         private static void IntialisePayments(ApplicationDbContext context)
         {
-           
+            if (context.PaymentCards.Any())
+            {
+                return;
+            }
+
+            var payment = new PaymentCard[]
+            {
+                new PaymentCard
+                {
+                    PaymentCardID= 1,
+                    CardName="Mr Luke Earle",
+                    CardNumber="0143 4923 5671 2390",
+                    CardType=  CardTypes.AmericanExpress,
+                    ExpiryMonth= 01,
+                    ExpiryYear=  22,
+                },
+
+                new PaymentCard
+
+                {
+                     PaymentCardID= 2,
+                    CardName="Mr Christian Partington",
+                    CardNumber="2912 7654 8912 4235",
+                    CardType=  CardTypes.Visa,
+                    ExpiryMonth= 04,
+                    ExpiryYear=  20,
+                },
+
+                 new PaymentCard
+
+                {
+                     PaymentCardID= 3,
+                    CardName="Mr Alexis Cortios",
+                    CardNumber="6231 5381 9056 8731",
+                    CardType=  CardTypes.MasterCard,
+                    ExpiryMonth= 11,
+                    ExpiryYear=  21,
+                },
+
+                  new PaymentCard
+
+                {
+                     PaymentCardID= 4,
+                    CardName="Mr James Sharp",
+                    CardNumber="1478 6723 8912 0376",
+                    CardType=  CardTypes.Visa,
+                    ExpiryMonth= 12,
+                    ExpiryYear=  23,
+                },
+
+                   new PaymentCard
+
+                {
+                     PaymentCardID= 5,
+                    CardName="Mr Thomas Davies",
+                    CardNumber="5673 8937 9642 2419",
+                    CardType=  CardTypes.AmericanExpress,
+                    ExpiryMonth= 09,
+                    ExpiryYear=  23,
+                },
+
+                    new PaymentCard
+
+                {
+                     PaymentCardID= 6,
+                    CardName="Mr Neil Alexander",
+                    CardNumber="7744 5567 9521 7821",
+                    CardType=  CardTypes.Visa,
+                    ExpiryMonth= 07,
+                    ExpiryYear=  20,
+
+                },
+
+                     new PaymentCard
+
+                {
+                     PaymentCardID= 7,
+                    CardName="Mr Shaun O'Neil",
+                    CardNumber="8467 8214 5910 2345",
+                    CardType=  CardTypes.MasterCard,
+                    ExpiryMonth= 05,
+                    ExpiryYear=  22,
+                },
+
+                      new PaymentCard
+
+                {
+                     PaymentCardID= 8,
+                    CardName="Mr Christian Partington",
+                    CardNumber="1010 2020 3232 4747",
+                    CardType=  CardTypes.MasterCard,
+                    ExpiryMonth= 09,
+                    ExpiryYear=  23,
+                },
+
+                       new PaymentCard
+
+                {
+                     PaymentCardID= 9,
+                    CardName="Mr Kevin Wright",
+                    CardNumber="7284 4910 5491 1781",
+                    CardType=  CardTypes.Visa,
+                    ExpiryMonth= 08,
+                    ExpiryYear=  23,
+                },
+
+                        new PaymentCard
+
+                {
+                     PaymentCardID= 10,
+                    CardName="Mr Noel Murray",
+                    CardNumber="5631 6420 8472 9010 ",
+                    CardType=  CardTypes.Visa,
+                    ExpiryMonth= 08,
+                    ExpiryYear=  21,
+                }
+
+
+
+
+            };
+
+              foreach (PaymentCard a in payment)
+            {
+                context.PaymentCards.Add(a);
+            }
+
+            context.SaveChanges();
+
+
+
+
         }
 
         private static void InitialiseLaptops(ApplicationDbContext context)
